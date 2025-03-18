@@ -1,0 +1,341 @@
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: max(100%, 1050px);
+    margin: 0;
+    min-height: 112px; 
+    background-color: var(--menu-bg);
+    color: white;
+    padding: 4px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.assignment-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr 3fr 1fr;
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.header {
+    font-weight: bold;
+    background-color: var(--table-header);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.cell {
+    padding: 10px;
+    border-bottom: 1px solid var(--text-color);
+    text-align: center;
+}
+
+.assignment-list a {
+    color: #3498db;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.assignment-list a:hover {
+    text-decoration: underline; 
+}
+
+.tut-table {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr; 
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.tutorial-list a {
+    color: #3498db;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.tutorial-list a:hover {
+    text-decoration: underline; 
+}
+
+.lecture-notes-content a {
+    color: #3498db;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.lecture-notes-content a:hover {
+    text-decoration: underline; 
+}
+
+.lec-table {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; 
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.taInfo-table {
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+ol li {
+    margin-bottom: 15px; 
+}
+
+body {
+    font-family: Arial;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+    /* margin-top: 112px; */
+    flex-grow: 1; 
+    padding: 20px;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+main section {
+    margin-bottom: 40px; 
+}
+
+footer {
+    margin-top: 15epx;
+    width: max(100%, 1050px);
+    background-color: #5F9EA0;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;  
+    bottom: 0;
+}
+
+footer a {
+    font-style: italic; 
+    text-decoration: none; 
+    color: #ffffff;   
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+h3 {
+    margin-bottom: 0; 
+}
+
+h2 {
+    margin-bottom: 0; 
+}
+
+hr {
+    margin-top: 0;
+}
+
+html, body {
+    margin: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 1000px;
+}
+
+.calendar-container iframe {
+    min-width: 1000px;
+    height: 600px;
+    border: 0;
+}
+
+table {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    min-width: 500px;
+    max-width: 900px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #A9A9A9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.smaller-h2 {
+    font-size: 1.3em; 
+}
+
+.online-resources a {
+    font-style: italic; 
+    color: #3498db;
+    text-decoration: none;
+}
+
+.online-resources a:hover {
+    text-decoration: underline;
+}
+
+.software-and-documentation a {
+    font-style: italic; 
+    color: #3498db;
+}
+
+code {
+    background-color: #f4f4f4; 
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #000000;
+}
+
+menu {
+    background-color: var(--menu-bg);
+}
+
+menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+menu ul li {
+    display: inline-block;
+    position: relative;
+}
+
+menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--menu-text);
+}
+
+menu ul li ul {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--menu-bg);
+    min-width: 160px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+menu ul li:hover ul {
+    opacity: 1;
+    pointer-events: auto;
+    display: block; 
+    background-color: var(--drop-down);
+}
+
+menu ul li ul li {
+    display: block;
+}
+
+menu ul li ul li a {
+    padding: 10px;
+    color: #ffffff;
+}
+
+menu ul li:hover > a {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.submitted {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4682B4;
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --menu-bg: #5F9EA0;
+    --menu-text: #ffffff;
+    --button-bg: #5F9EA0;
+    --button-text: #ffffff;
+    --table-header: #f4f4f4;
+    --drop-down: #508183;
+}
+
+body:has(#dark-toggle:checked) {
+    --bg-color: #2e2e2e ;
+    --text-color: #f5f5f5;
+    --menu-bg: #395e5f;
+    --menu-text: #f5f5f5;
+    --button-bg: #444;
+    --button-text: #f5f5f5;
+    --table-header:#606060;
+    --drop-down: #2b4546;
+}
+
+
+
+
+
+
+
+
